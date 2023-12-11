@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Adventures and Camping Gear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <style>
+    
+        .tab {
+            display: none;
+        }
+
+        .accordion {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/MainLogo1.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="map.html">Locations</a></li>
+                    <li><a href="check.html">Activities</a></li>
+                </ul>
+            </div>  
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="welcome-text">
+            <h1>Choose We Also Sell Equipment</h1>
+            <h4>Feel the thrill of adventure as you explore our camping gear and essentials. We have everything you need for an unforgettable outdoor experience. Take a moment to explore our collection and let the spirit of adventure guide you. Your next camping trip starts here – start exploring today!</h4>
+        </div>
+    </section>
+
+    <main>
+        <section>
+            <h2>Shop</h2>
+            <p>Discover the essential items for a memorable camping experience.</p>
+
+            <!-- Tabbed Panel -->
+            <div class="tabbed-panel">
+                <button class="tab-link" onclick="openTab(event, 'gear1')">Gear Set 1</button>
+                <button class="tab-link" onclick="openTab(event, 'gear2')">Gear Set 2</button>
+                <button class="tab-link" onclick="openTab(event, 'gear3')">Gear Set 3</button>
+
+                <div id="gear1" class="tab">
+                    <h3>Tents</h3>
+                    <p>Explore our selection of high-quality tents for different group sizes and weather conditions. Whether you need a spacious family tent or a lightweight backpacking tent, we have you covered.</p>
+                </div>
+                <div id="gear2" class="tab">
+                    <h3>Sleeping Bags</h3>
+                    <p>Stay warm and comfortable during your camping nights with our cozy sleeping bags. We offer a variety of options, including sleeping bags suitable for different temperatures and seasons.</p>
+                </div>
+                <div id="gear3" class="tab">
+                    <h3>Cooking Equipment</h3>
+                    <p>Enhance your outdoor cooking experience with our camping stoves, cookware, and utensils. From compact stoves for backpacking to comprehensive cooking sets for family camping, we have the gear you need.</p>
+                </div>
+            </div>
+
+            <!-- Accordion -->
+            <div class="accordion">
+                <button class="accordion-btn" onclick="toggleAccordion('section1')">Outdoor Safety</button>
+                <div id="section1" class="accordion-content">
+                    <p>Ensure your safety during camping adventures with our outdoor safety essentials. This includes first aid kits, emergency supplies, and navigation tools.</p>
+                </div>
+                <button class="accordion-btn" onclick="toggleAccordion('section2')">Backpacks and Bags</button>
+                <div id="section2" class="accordion-content">
+                    <p>Carry your gear comfortably with our selection of durable backpacks and bags. Choose from various sizes and designs to suit your camping style.</p>
+                </div>
+            </div>
+
+            <!-- Checkboxes -->
+            <h3>Additional Items</h3>
+            <label><input type="checkbox"> Waterproof Jacket</label>
+            <label><input type="checkbox"> Portable Stove</label>
+            <label><input type="checkbox"> First Aid Kit</label>
+
+            <!-- Radio Buttons -->
+            <h3>Choose your preferred brand of tent:</h3>
+            <label><input type="radio" name="bootType" value="hiking"> Kifaru</label>
+            <label><input type="radio" name="bootType" value="climbing"> Hilleberg</label>
+
+            <!-- Select Box -->
+            <h3>Select the size of your tent:</h3>
+            <select>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </section>
+
+        <!-- Shop page section -->
+        <section class="shop-content">
+            <div class="row">
+                <div class="shop-left">
+                    <img src="images/4Background.png" alt="Product Image">
+                </div>
+                <div class="shop-right">
+                    <h3>ALPS Mountaineering</h3>
+                    <p>Camp Creek 6 One-Room Tent</p>
+                    <p>$120</p>
+                    <button class="add-to-cart-btn" onclick="addToCart()">ADD TO CART</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comment box -->
+        <div class="comment-box">
+            <h3>Leave a comment</h3>
+            <form class="comment-form">
+                <input type="text" placeholder="Enter Name">
+                <input type="email" placeholder="Enter E-mail">
+                <textarea rows="5" placeholder="Your Comment"></textarea>
+                <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Verano Camping</p>
+    </footer>
+
+<script src="shop.js"></script>
+
+
+
+  
+
+
+
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <h4>Our Clients</h4>
+        <p>Tammy Hotchkiss</p>
+
+        <div class="row">
+            <div class="footer-col">
+                <h3>Mission and Vision</h3>
+                <p>At Verano Camping, we're dedicated to providing exceptional camping experiences, fostering community, and promoting sustainability. Our vision is to inspire a deep connection with nature, encourage outdoor education, and leave a positive environmental impact for a brighter life outdoor future.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Camping Information</h3>
+                <p>Tel: +123 45 678 999<br>
+                Fax: +123 45 678 999<br>
+                E-mail: Alejandr4gg@gmail.com</p>
+            </div>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter" ></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-youtube-play"></i>
+            </div>
+        </div>
+
+        <p>Made with <i class="fa fa-heart"></i> by Celia Gonzalez</p>
+    </section>
